@@ -16,6 +16,6 @@ n6 = (num % 10)
 print(f"{n1,n2,n3,n4,n5,n6}")
 
 if (n1+n2+n3) == (n4+n5+n6):
-    print('Yes')
+    print('Yes, билетик счастливый!')
 else:
-    print('No')
+    print('No :(')
