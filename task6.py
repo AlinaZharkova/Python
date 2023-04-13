@@ -19,3 +19,13 @@ if (n1+n2+n3) == (n4+n5+n6):
     print('Yes, билетик счастливый!')
 else:
     print('No :(')
+
+#решение с помощью строк
+num=input("Введите 6-значный номер билетика: ") 
+if len(num) == 6:
+    if int(num[0])+int(num[1])+ int(num[2]) == int(num[3])+int(num[4])+ int(num[5]):
+        print(f'Yes! билетик с номером {num} счастливый!')
+    else:
+        print("Обычный билет :( ")
+else:
+    print("Это не наш билетик")    
