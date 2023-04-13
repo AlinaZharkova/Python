@@ -11,3 +11,9 @@ units = (n % 10)
 
 print(f"Полученные числа: {hundreds, tens, units}")
 print(f"Cумма цифр трехзначного числа = {hundreds + tens + units}")
+
+#решение с помощью строк
+print("Введите трехзначное число: ")
+n=input()
+sum=int(n[0])+int(n[1])+int(n[2])
+print(sum)
