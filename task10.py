@@ -4,18 +4,31 @@
 # 5 -> 1 0 1 1 0
 # 2
 
+# n = int(input("Введите количество монет на столе: "))
+# gerb = 0
+# reshka = 0
+# for i in range(n):
+#     x = int(input("Введите цифру в зависимости от положения монетки, через enter: герб-1, решкa-0: "))
+#     if x == 1:
+#         gerb += 1
+#     else:
+#         reshka += 1
+# if gerb < reshka:
+#     print(f"Монет, лежащих гербом вверх, меньше чем решкой: {gerb}")
+# elif gerb == reshka:
+#     print(f"Одинаковое количество гербов и решек")
+# else:
+#     print((f"Монет, лежащих решкой вверх, меньше чем гербом: {reshka}"))
+
 n = int(input("Введите количество монет на столе: "))
-gerb = 0
-reshka = 0
+count = 0
 for i in range(n):
-    x = int(input("Введите цифру в зависимости от положения монетки, через enter: герб-1, решкa-0: "))
-    if x == 1:
-        gerb += 1
-    else:
-        reshka += 1
-if gerb < reshka:
-    print(f"Монет, лежащих гербом вверх, меньше чем решкой: {gerb}")
-elif gerb == reshka:
-    print(f"Одинаковое количество гербов и решек")
-else:
-    print((f"Монет, лежащих решкой вверх, меньше чем гербом: {reshka}"))
+    coin = int(input("Введите цифру в зависимости от положения монетки, через enter: герб-1, решкa-0: "))
+    if coin == 1: #gerb
+        count += 1
+if count<n/2:      
+    print(f"переверни {count} монеты - gerb(1)")
+elif count==n/2:
+    print(f"переверни любые {n-count} монеты - равное количество гербов и решек.")
+else: 
+    print(f"переверни {n-count} монеты - reshka(0)")
