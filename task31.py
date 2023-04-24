@@ -11,11 +11,14 @@
 # Input: 7
 # Output: 21
 # Задание необходимо решать через рекурсию
+#считаем, что ряд Фибоначчи начинается так: 1 2 3 5 8 13 21 34
 
-n = int(input("Ведите число: "))
+n = int(input("Введите число: "))
 
 def fibonachi(n):
-    if n <= 1:
+    if n == 1:
+        return 0
+    elif n == 2 or n == 3:
         return 1
     else:
         return fibonachi(n-1) + fibonachi(n-2)
